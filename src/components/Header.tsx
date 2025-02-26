@@ -13,7 +13,7 @@ const Header = () => {
         <div className="h-16 flex items-center justify-between">
           <div className="flex items-center gap-6">
             <a href="/" className="text-xl font-bold">
-              Previous Year Papers
+              PEC-PYQs
             </a>
             <nav className="hidden md:flex items-center gap-6">
               <a
