@@ -66,7 +66,7 @@ const Upload = () => {
 
         try {
             // Fork the repo
-            const forkResponse = await fetch('https://api.github.com/repos/Robotics-Society-PEC/Studies/forks', {
+            const forkResponse = await fetch('https://api.github.com/repos/Robotics-PEC/Studies/forks', {
                 method: 'POST',
                 headers: {
                     'Authorization': `token ${user.access_token}`,
@@ -256,7 +256,7 @@ const Upload = () => {
             }
 
             // Step 10: Create pull request
-            const prResponse = await fetch('https://api.github.com/repos/Robotics-Society-PEC/Studies/pulls', {
+            const prResponse = await fetch('https://api.github.com/repos/Robotics-PEC/Studies/pulls', {
                 method: 'POST',
                 headers: {
                     'Authorization': `token ${user.access_token}`,

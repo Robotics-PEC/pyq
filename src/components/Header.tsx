@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Header = () => {
   const handleGithubClick = () => {
-    window.open("https://github.com/Robotics-Society-PEC/Studies", "_blank");
+    window.open("https://github.com/Robotics-PEC/Studies", "_blank");
   };
 
   return (
