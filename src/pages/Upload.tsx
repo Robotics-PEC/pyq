@@ -1,11 +1,15 @@
 import { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDropzone } from "react-dropzone";
+
 import { ChevronLeft, Upload as UploadIcon, Github, Check, Loader2 } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import Header from "@/components/Header";
+
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/contexts/AuthContext";
@@ -18,6 +22,7 @@ const Upload = () => {
     const [file, setFile] = useState<File | null>(null);
     const [courseCode, setCourseCode] = useState("");
     const [courseName, setCourseName] = useState("");
+    const [term, setTerm] = useState("");
     const [year, setYear] = useState("");
 
     const onDrop = useCallback((acceptedFiles: File[]) => {
@@ -129,7 +134,7 @@ const Upload = () => {
                     courseExists = true;
                     course.resources.pyqs.push({
                         year: year,
-                        file: 'End-Term',
+                        file: term,
                     });
                     break;
                 }
@@ -142,7 +147,7 @@ const Upload = () => {
                     resources: {
                         pyqs: [{
                             year: year,
-                            file: 'End-Term',
+                            file: term,
                         }]
                     }
                 });
@@ -202,7 +207,7 @@ const Upload = () => {
                             sha: updatedBlobSha,
                         },
                         {
-                            path: `Papers/${courseName}/${year}/End-Term.pdf`,
+                            path: `Papers/${courseName}/${year}/${term}.pdf`,
                             mode: '100644',
                             type: 'blob',
                             sha: blobSha,
@@ -226,7 +231,7 @@ const Upload = () => {
                     'Accept': 'application/vnd.github.v3+json',
                 },
                 body: JSON.stringify({
-                    message: `Update papers.json and add End-Term PDF for ${courseCode} (${courseName}, ${year})`,
+                    message: `Update papers.json and add ${term} PDF for ${courseCode} (${courseName}, ${year})`,
                     tree: treeSha,
                     parents: [parentCommitSha],
                 })
@@ -351,6 +356,20 @@ const Upload = () => {
                                 max={new Date().getFullYear()}
                                 className="w-full"
                             />
+                        </div>
+
+                        <div className="space-y-2">
+                            <Label htmlFor="year">Term</Label>
+                            <RadioGroup value={term} onValueChange={setTerm} className="flex">
+                                <label className="flex items-center space-x-2">
+                                    <RadioGroupItem value="Mid-Term" id="mid-term" />
+                                    <span>Mid-Term</span>
+                                </label>
+                                <label className="flex items-center space-x-2">
+                                    <RadioGroupItem value="End-Term" id="end-term" />
+                                    <span>End-Term</span>
+                                </label>
+                            </RadioGroup>
                         </div>
 
                         <div className="space-y-2">
