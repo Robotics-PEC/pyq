@@ -22,7 +22,7 @@ type Course = {
 };
 
 const GITHUB_JSON_URL =
-  "https://raw.githubusercontent.com/Robotics-PEC/Studies/main/src/data/papers.json";
+  "https://raw.githubusercontent.com/Robotics-PEC/pyq/main/src/data/papers.json";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -114,14 +114,14 @@ const Index = () => {
                   {paper.resources.pyqs.map((resource) => (
                     <PaperViewer
                       key={resource.year}
-                      url={`https://raw.githubusercontent.com/Robotics-PEC/Studies/main/Papers/${encodeURIComponent(paper.name)}/${resource.year}/${resource.file}.pdf`}
+                      url={`https://raw.githubusercontent.com/Robotics-PEC/pyq/main/Papers/${encodeURIComponent(paper.name)}/${resource.year}/${resource.file}.pdf`}
                     />
                   ))}
                   <div className="flex justify-center gap-4 flex-wrap">
                     {paper.resources.pyqs.map((resource) => (
                       <a
                         key={`${resource.year}-${resource.file}`}
-                        href={`https://raw.githubusercontent.com/Robotics-PEC/Studies/main/Papers/${encodeURIComponent(paper.name)}/${resource.year}/${resource.file}.pdf`}
+                        href={`https://raw.githubusercontent.com/Robotics-PEC/pyq/main/Papers/${encodeURIComponent(paper.name)}/${resource.year}/${resource.file}.pdf`}
                         download={`${paper.name}_${resource.year}_${resource.file}.pdf`}
                       >
                         <Button className="gap-2">
