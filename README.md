@@ -1,13 +1,13 @@
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/Robotics-Society-PEC/Studies" alt="GitHub License">
-  <img src="https://img.shields.io/github/stars/Robotics-Society-PEC/Studies?style=flat" alt="GitHub Repo stars">
-  <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/Robotics-Society-PEC/Studies">
-  <img alt="GitHub forks" src="https://img.shields.io/github/forks/Robotics-Society-PEC/Studies?style=flat">
-  <a href="https://gitpod.io/#https://github.com/Robotics-Society-PEC/Studies.git"><img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod" alt="Gitpod Ready-to-Code"></a>
+  <img src="https://img.shields.io/github/license/Robotics-PEC/pyq" alt="GitHub License">
+  <img src="https://img.shields.io/github/stars/Robotics-PEC/pyq?style=flat" alt="GitHub Repo stars">
+  <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/Robotics-PEC/pyq">
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/Robotics-PEC/pyq?style=flat">
+  <a href="https://gitpod.io/#https://github.com/Robotics-PEC/pyq.git"><img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod" alt="Gitpod Ready-to-Code"></a>
 </p>
 
-# Studies
+# pyq
 
 ## About The Project
 
@@ -20,7 +20,7 @@ PEC Paper is an open source project started to help PEC students find previous y
 
 ### Step 1: Fork the Repository
 
-1. Go to the [Studies Repository](https://github.com/Robotics-Society-PEC/Studies).
+1. Go to the [pyq Repository](https://github.com/Robotics-PEC/pyq).
 2. Click the **Fork** button at the top-right corner.
 3. This will create a copy of the repository under your GitHub account.
 
@@ -28,11 +28,11 @@ PEC Paper is an open source project started to help PEC students find previous y
 
 1. Open a terminal and run the following command to clone the repository:
    ```sh
-   git clone https://github.com/YOUR-USERNAME/Studies.git
+   git clone https://github.com/YOUR-USERNAME/pyq.git
    ```
 2. Navigate to the repository directory:
    ```sh
-   cd Studies
+   cd pyq
    ```
 
 ### Step 3: Create a Directory for the Paper
@@ -104,7 +104,7 @@ Your contribution will be reviewed and merged by the repository maintainers!
 
 ## Reporting Issues
 
-If you encounter a bug or have a feature request, please report it using the [issue tracker](https://github.com/Robotics-Society-PEC/Studies/issues).
+If you encounter a bug or have a feature request, please report it using the [issue tracker](https://github.com/Robotics-PEC/pyq/issues).
 
 ## Homage to the Original Creators
 
@@ -115,4 +115,4 @@ If you encounter a bug or have a feature request, please report it using the [is
 
 ## Current Contributors
 
-<img alt="Current Creators" src="https://contrib.rocks/image?repo=Robotics-Society-PEC/Studies">
+<img alt="Current Creators" src="https://contrib.rocks/image?repo=Robotics-PEC/pyq">
