@@ -24,7 +24,7 @@ serve(async (req) => {
     const REDIRECT_URI = Deno.env.get("REDIRECT_URI")!;
 
     // @ts-ignore
-    const redirectUri = "https://roboticspec.com/Studies/#Upload";
+    const redirectUri = "https://roboticspec.com/pyq/#/";
     // Uncomment for debugging
     // const redirectUri = "http://localhost:8080/";
 
