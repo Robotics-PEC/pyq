@@ -1,8 +1,6 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { GitFork, Menu, X, BookMarked } from "lucide-react";
-import { Link } from "react-router-dom";
+import { GitFork, Menu } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -28,18 +26,18 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="h-16 flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link to="/" className="text-xl font-bold">
+            <a href="/" className="text-xl font-bold">
               PEC Robotics 
-            </Link>
+            </a>
             <nav className="hidden md:flex items-center gap-6">
               {navigation.map((item) => (
-                <Link
+                <a
                   key={item.name}
-                  to={item.path}
+                  href={item.path}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
             </nav>
           </div>
@@ -63,14 +61,14 @@ const Header = () => {
               <SheetContent>
                 <div className="flex flex-col gap-4 mt-8">
                   {navigation.map((item) => (
-                    <Link
+                    <a
                       key={item.name}
-                      to={item.path}
+                      href={item.path}
                       className="text-lg font-medium px-4 py-2 hover:bg-accent rounded-md transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </SheetContent>

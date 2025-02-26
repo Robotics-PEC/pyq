@@ -1,6 +1,4 @@
-
 import { Github, Twitter, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -28,24 +26,24 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/projects" className="text-sm text-muted-foreground hover:text-foreground">
+                <a href="/projects" className="text-sm text-muted-foreground hover:text-foreground">
                   Projects
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/activities" className="text-sm text-muted-foreground hover:text-foreground">
+                <a href="/activities" className="text-sm text-muted-foreground hover:text-foreground">
                   Activities
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/Docify" className="text-sm text-muted-foreground hover:text-foreground">
+                <a href="/Docify" className="text-sm text-muted-foreground hover:text-foreground">
                   Docify
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/pyq" className="text-sm text-muted-foreground hover:text-foreground">
+                <a href="/pyq" className="text-sm text-muted-foreground hover:text-foreground">
                   Previous Year Questions
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
