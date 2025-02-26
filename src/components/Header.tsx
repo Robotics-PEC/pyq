@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { AuthButton } from "@/components/AuthButton";
 import { GitFork, Menu } from "lucide-react";
 import {
   Sheet,
@@ -42,6 +43,7 @@ const Header = () => {
             </nav>
           </div>
           <div className="flex items-center gap-4">
+            <AuthButton />
             <Button
               variant="outline"
               onClick={handleGithubClick}
