@@ -28,13 +28,13 @@ const Header = () => {
         <div className="h-16 flex items-center justify-between">
           <div className="flex items-center gap-6">
             {/* Logo */}
-            <a href="/" className="flex items-center gap-2">
-              <img 
+             <a href="/">
+              <img
                 src="/logo.png"
                 alt="PEC Robotics Logo"
-                width="120"
-                height="40"
-                className="h-10 w-10"
+                width={120}
+                height={40}
+                className="object-contain"
               />
             </a>
             <nav className="hidden md:flex items-center gap-6">
