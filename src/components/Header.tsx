@@ -7,7 +7,6 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import Image from "next/image"; // Import Next.js Image component
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,11 +29,12 @@ const Header = () => {
           <div className="flex items-center gap-6">
             {/* Logo */}
             <a href="/" className="flex items-center gap-2">
-              <Image 
+              <img 
                 src="/logo.png"
                 alt="PEC Robotics Logo"
-                width={120}
-                height={40}
+                width="120"
+                height="40"
+                className="h-10 w-10"
               />
             </a>
             <nav className="hidden md:flex items-center gap-6">
