@@ -7,6 +7,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Image from "next/image"; // Import Next.js Image component
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,8 +28,14 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="h-16 flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <a href="/" className="text-xl font-bold">
-              PEC Robotics 
+            {/* Logo */}
+            <a href="/" className="flex items-center gap-2">
+              <Image 
+                src="/logo.png"
+                alt="PEC Robotics Logo"
+                width={120}
+                height={40}
+              />
             </a>
             <nav className="hidden md:flex items-center gap-6">
               {navigation.map((item) => (
