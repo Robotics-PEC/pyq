@@ -5,26 +5,23 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "./",
+  base: mode === "production" ? "/pyq/" : "./",
   server: {
-    host: "::",
-    port: 8080,
+    host: 'localhost',
+    port: 8000,
+    strictPort: false,
+    hmr: {
+      host: 'localhost',
+      port: 8000,
+      protocol: 'ws'
+    }
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(
     Boolean
   ),
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, 'src'),
     },
-  },
-  build: {
-    rollupOptions: {
-      output: {
-        entryFileNames: "index.js",
-        assetFileNames: "index.css",
-        dir: "./dist",
-      },
-    },
-  },
+  }
 }));
